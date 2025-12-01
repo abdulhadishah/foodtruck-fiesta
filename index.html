@@ -1,479 +1,602 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Rubik:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
-    <title>iLove Food</title>
-</head>
+    <title>FoodTruck Fiesta</title>
+  </head>
 
-<body>
-
+  <body id="top">
     <!-- nav bar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#">iLove Food</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarScroll">
-                <ul class="navbar-nav m-auto my-2 my-lg-0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center brand-link" href="#">
+          <img
+            src="images/hamburger-icon.png"
+            width="30"
+            height="30"
+            class="me-2 brand-icon"
+            alt="logo"
+          />
+          <span class="brand-text">FoodTruck Fiesta</span>
+        </a>
 
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#trending">Trending</a>
-                    </li>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav m-auto my-2 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#top">Home</a>
+            </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#trending">Trending</a>
+            </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#menu">Menu</a>
-                    </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menu">Menu</a>
+            </li>
 
-                </ul>
-                <form class="d-flex">
-                    <input class="px-2 search" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn0" type="submit">Search</button>
-                </form>
-            </div>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <!-- Search removed to avoid non-functional UI -->
         </div>
+      </div>
     </nav>
 
-    <!-- section 1 -->
+    <!-- section 1: hero -->
     <section class="main">
-        <div class="container py-5">
-            <div class="row py-4">
-                <div class="col-lg-7 pt-5 text-center">
-                    <h1 class="field">Where cravings are met</h1>
-                    <button class="btn1 mt-3">Learn More</button>
-                </div>
-            </div>
+      <div class="container py-5">
+        <div class="row py-4">
+          <div class="col-lg-7 text-center text-lg-start">
+            <h1 class="field">Where cravings are met</h1>
+            <button class="btn1 mt-3">
+              <a href="#about" class="btn-link">Learn more</a>
+            </button>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- section 2 -->
+    <!-- section 2: what we offer -->
     <section class="new bg-color py-5">
+      <div class="col-lg-5 pt-3 m-auto text-center">
+        <h1 class="section-heading">What we offer</h1>
+        <h6 class="section-subtitle">With love, from our kitchen</h6>
+      </div>
 
-        <div class="col-lg-5 pt-5 m-auto text-center">
-            <h1 style="font-weight: 700;">What we offer</h1>
-            <h6 style="color: red;">With love, from our kitchen</h6>
-        </div>
+      <div class="container py-1">
+        <div class="row pt-1">
+          <div class="col-lg-7 m-auto">
+            <div class="row text-center">
+              <div class="col-lg-4 mb-4 mb-lg-0">
+                <img
+                  src="images/food-package.png"
+                  class="offer-icon img-fluid"
+                  alt="Fast food icon"
+                />
+                <h3>Fast food</h3>
+                <p class="offer-text">
+                  Burgers, fries, hot dogs and more — quick, hot, and made to
+                  order.
+                </p>
+              </div>
 
-        <div class="container py-1">
-            <div class="row pt-1">
+              <div class="col-lg-4 mb-4 mb-lg-0">
+                <img
+                  src="images/caramel.png"
+                  class="offer-icon img-fluid"
+                  alt="Dessert icon"
+                />
+                <h3>Desserts</h3>
+                <p class="offer-text">
+                  Sweet treats for every mood, from doughnuts to caramel-loaded
+                  bites.
+                </p>
+              </div>
 
-                <div class="col-lg-7 m-auto">
-
-                    <div class="row text-center">
-
-                        <div class="col-lg-4">
-                            <img src="images/food-package.png" class="img img-fluid" alt="">
-                            <h3>Fast Food</h3>
-                        </div>
-
-                        <div class="col-lg-4">
-                            <img src="images/caramel.png" class="img img-fluid" alt="">
-                            <h3>Dessert</h3>
-                        </div>
-
-                        <div class="col-lg-4">
-                            <img src="images/mate-de-coca.png" class="img img-fluid" alt="">
-                            <h3>Beverage</h3>
-                        </div>
-
-                    </div>
-
-                </div>
-
+              <div class="col-lg-4">
+                <img
+                  src="images/mate-de-coca.png"
+                  class="offer-icon img-fluid"
+                  alt="Beverage icon"
+                />
+                <h3>Beverages</h3>
+                <p class="offer-text">
+                  Shakes, mocktails, and fizzy drinks to keep the party going.
+                </p>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- trending -->
     <section class="product" id="trending">
-
-        <div class="container py-5">
-
-            <div class="row py-5">
-
-                <div class="col-lg-5 m-auto text-center">
-                    <h1 style="font-weight: 700;">Our Most Popular Foods</h1>
-                    <h6 style="color: red;">Bite into a mouthwatering flavour</h6>
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="col-lg-3 text-center">
-
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="images/Fries and Dipping Sauce.jpg" class="img-fluid" alt="">
-                        </div>
-                    </div>
-                    <h6>Fries and Dipping Sauce</h6>
-                    <p>$6.99</p>
-
-                </div>
-
-                <div class="col-lg-3 text-center">
-
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="images/Boba CockTale.jpg" class="img-fluid" alt="">
-                        </div>
-                    </div>
-                    <h6>Boba CockTale</h6>
-                    <p>$9.99</p>
-
-                </div>
-
-                <div class="col-lg-3 text-center">
-
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="images/Hot Dog On Sandwiches.jpg" class="img-fluid" alt="">
-                        </div>
-                    </div>
-                    <h6>Hot Dog On Sandwiches</h6>
-                    <p>$10</p>
-
-                </div>
-
-                <div class="col-lg-3 text-center">
-
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="images/Lettuce and Cheese Burgur.jpg" class="img-fluid" alt="">
-                        </div>
-                    </div>
-                    <h6>Lettuce and Cheese Burgur</h6>
-                    <p>$4.99</p>
-
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="col-lg-6 text-center m-auto">
-                    <button class="btn1">Click For More</button>
-                </div>
-
-            </div>
-
+      <div class="container py-5">
+        <div class="row py-4">
+          <div class="col-lg-5 m-auto text-center">
+            <h1 class="section-heading">Our most popular picks</h1>
+            <h6 class="section-subtitle">
+              Bite into a mouth-watering favorite
+            </h6>
+          </div>
         </div>
 
-    </section>
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img
+                  src="images/Fries and Dipping Sauce.jpg"
+                  class="img-fluid"
+                  alt="Fries and dipping sauce"
+                />
+              </div>
+            </div>
+            <h6>Fries & dipping sauce</h6>
+            <p class="price">$6.99</p>
+          </div>
 
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img
+                  src="images/Boba CockTale.jpg"
+                  class="img-fluid"
+                  alt="Boba cocktail"
+                />
+              </div>
+            </div>
+            <h6>Boba cocktail</h6>
+            <p class="price">$9.99</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img
+                  src="images/Hot Dog On Sandwiches.jpg"
+                  class="img-fluid"
+                  alt="Loaded hot dog sandwich"
+                />
+              </div>
+            </div>
+            <h6>Loaded hot dog sandwich</h6>
+            <p class="price">$10.00</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img
+                  src="images/Lettuce and Cheese Burgur.jpg"
+                  class="img-fluid"
+                  alt="Lettuce and cheese burger"
+                />
+              </div>
+            </div>
+            <h6>Lettuce & cheese burger</h6>
+            <p class="price">$4.99</p>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-lg-6 text-center m-auto">
+            <button class="btn1">
+              <a href="#menu" class="btn-link">View full menu</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- about -->
     <section class="about" id="about">
-        <div class="container py-5">
-            <div class="row py-5">
-                <div class="col-lg-8 m-auto text-center">
-                    <h1>Welcome to the <span
-                            style="font-size: 2.5rem; color: black; font-family: 'Lobster', cursive;">iLoveFood</span>
-                        Community!</h1>
-                    <h6 style="color: red;">Always providing delectable food</h6>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-4 text-center">
-                        <img src="images/Joyful black man with sandwich standing against food truck.jpg"
-                            class="img-fluid mb-3" alt="">
-                        <h5>Joyful Customers</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptas numquam
-                            commodi, inventore, accusamus quam repudiandae natus rem facere eos culpa quas quae unde
-                            tempore!!</p>
-                    </div>
-
-                    <div class="col-lg-4 text-center">
-                        <img src="images/A Man with Black Apron Holding a Stainless Basket Over a Stainless Deep Fryer.jpg"
-                            class="img-fluid mb-3" alt="">
-                        <h5>Chef de cuisine</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptas numquam
-                            commodi, inventore, accusamus quam repudiandae natus rem facere eos culpa quas quae unde
-                            tempore!!</p>
-                    </div>
-
-                    <div class="col-lg-4 text-center">
-                        <img src="images/Happy woman with donut taking selfie near food station.jpg"
-                            class="img-fluid mb-3" alt="">
-                        <h5>Notorious</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptas numquam
-                            commodi, inventore, accusamus quam repudiandae natus rem facere eos culpa quas quae unde
-                            tempore!!</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="row">
-                <div class="col-lg-6 text-center m-auto">
-                    <button class="btn1">Know More</button>
-                </div>
-            </div>
-
+      <div class="container py-5">
+        <div class="row py-4">
+          <div class="col-lg-8 m-auto text-center">
+            <h1>
+              Welcome to the
+              <span class="brand-script">FoodTruck Fiesta</span>
+              community!
+            </h1>
+            <h6 class="section-subtitle">Always serving something delicious</h6>
+          </div>
         </div>
+
+        <div class="row pt-3">
+          <div class="col-lg-4 text-center mb-4">
+            <img
+              src="images/Joyful black man with sandwich standing against food truck.jpg"
+              class="img-fluid mb-3"
+              alt="Happy customer with a sandwich"
+            />
+            <h5>Joyful customers</h5>
+            <p>
+              We love watching people take that first bite. Regulars,
+              first-timers, late-night snackers — everyone’s welcome at our
+              window.
+            </p>
+          </div>
+
+          <div class="col-lg-4 text-center mb-4">
+            <img
+              src="images/A Man with Black Apron Holding a Stainless Basket Over a Stainless Deep Fryer.jpg"
+              class="img-fluid mb-3"
+              alt="Chef frying food"
+            />
+            <h5>From our kitchen</h5>
+            <p>
+              Freshly fried, toasted, and shaken. Our team keeps the grill hot
+              and the fryer busy so your order stays crispy and warm.
+            </p>
+          </div>
+
+          <div class="col-lg-4 text-center mb-4">
+            <img
+              src="images/Happy woman with donut taking selfie near food station.jpg"
+              class="img-fluid mb-3"
+              alt="Woman with donut taking a selfie"
+            />
+            <h5>Street food vibes</h5>
+            <p>
+              Photos, stories, snacks with friends — we’re here for the small
+              moments that make street food feel special.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 text-center m-auto">
+            <button class="btn1">
+              <a href="#contact" class="btn-link">Know more</a>
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- menu -->
     <section class="shop" id="menu">
-        <div class="container">
-            <div class="py-5">
-                <div class="col-lg-8 m-auto text-center">
-                    <h1>Browse our Menu</h1>
-                    <h6 style="color: red;">Quick and delicious!</h6>
-                </div>
-            </div>
-
-            <!-- 1 -->
-            <div class="row">
-
-                <div class="col-lg-3 text-center">
-
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="images/Fries and Dipping Sauce.jpg" class="img-fluid" alt="">
-                        </div>
-                    </div>
-                    <h6>Fries and Dipping Sauce</h6>
-                    <p>$6.99</p>
-
-                </div>
-
-                <div class="col-lg-3 text-center">
-
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="images/Boba CockTale.jpg" class="img-fluid" alt="">
-                        </div>
-                    </div>
-                    <h6>Boba CockTale</h6>
-                    <p>$9.99</p>
-
-                </div>
-
-                <div class="col-lg-3 text-center">
-
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="images/Hot Dog On Sandwiches.jpg" class="img-fluid" alt="">
-                        </div>
-                    </div>
-                    <h6>Hot Dog On Sandwiches</h6>
-                    <p>$10</p>
-
-                </div>
-
-                <div class="col-lg-3 text-center">
-
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="images/Lettuce and Cheese Burgur.jpg" class="img-fluid" alt="">
-                        </div>
-                    </div>
-                    <h6>Lettuce and Cheese Burgur</h6>
-                    <p>$4.99</p>
-
-                </div>
-
-            </div>
-
-            <!-- 2 -->
-            <div class="row">
-
-                <div class="col-lg-3 text-center">
-
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="images/Champagne Flutes With color Liquids.jpg" class="img-fluid" alt="">
-                        </div>
-                    </div>
-                    <h6>Champagne Flutes With color Liquids</h6>
-                    <p>$20.99</p>
-
-                </div>
-
-                <div class="col-lg-3 text-center">
-
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="images/Watermelon and Lemon Fruit Shake.jpg" class="img-fluid" alt="">
-                        </div>
-                    </div>
-                    <h6>Watermelon and Lemon Fruit Shake</h6>
-                    <p>$7.79</p>
-
-                </div>
-
-                <div class="col-lg-3 text-center">
-
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="images/Pepperoni Pizza on Plate.jpg" class="img-fluid" alt="">
-                        </div>
-                    </div>
-                    <h6>Pepperoni Pizza</h6>
-                    <p>$15.66</p>
-
-                </div>
-
-                <div class="col-lg-3 text-center">
-
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="images/Fried Chicken.jpg" class="img-fluid" alt="">
-                        </div>
-                    </div>
-                    <h6>Classic Fried Chicken</h6>
-                    <p>$22.99</p>
-
-                </div>
-
-            </div>
+      <div class="container">
+        <div class="py-5">
+          <div class="col-lg-8 m-auto text-center">
+            <h1 class="section-heading">Browse our menu</h1>
+            <h6 class="section-subtitle">Quick and delicious</h6>
+          </div>
         </div>
+
+        <!-- row 1 -->
+        <div class="row g-4 mb-4">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img
+                  src="images/Fries and Dipping Sauce.jpg"
+                  class="img-fluid"
+                  alt="Fries and dipping sauce"
+                />
+              </div>
+            </div>
+            <h6>Fries & dipping sauce</h6>
+            <p class="price">$6.99</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img
+                  src="images/Boba CockTale.jpg"
+                  class="img-fluid"
+                  alt="Boba drink"
+                />
+              </div>
+            </div>
+            <h6>Brown sugar boba</h6>
+            <p class="price">$9.99</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img
+                  src="images/Hot Dog On Sandwiches.jpg"
+                  class="img-fluid"
+                  alt="Hot dog"
+                />
+              </div>
+            </div>
+            <h6>Classic hot dog</h6>
+            <p class="price">$10.00</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img
+                  src="images/Lettuce and Cheese Burgur.jpg"
+                  class="img-fluid"
+                  alt="Burger with lettuce and cheese"
+                />
+              </div>
+            </div>
+            <h6>Cheese burger</h6>
+            <p class="price">$4.99</p>
+          </div>
+        </div>
+
+        <!-- row 2 -->
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img
+                  src="images/Champagne Flutes With color Liquids.jpg"
+                  class="img-fluid"
+                  alt="Colorful mocktail trio"
+                />
+              </div>
+            </div>
+            <h6>Color splash mocktail trio</h6>
+            <p class="price">$20.99</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img
+                  src="images/Watermelon and Lemon Fruit Shake.jpg"
+                  class="img-fluid"
+                  alt="Watermelon and lemon fruit shake"
+                />
+              </div>
+            </div>
+            <h6>Watermelon lemon shake</h6>
+            <p class="price">$7.79</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img
+                  src="images/Pepperoni Pizza on Plate.jpg"
+                  class="img-fluid"
+                  alt="Pepperoni pizza on a plate"
+                />
+              </div>
+            </div>
+            <h6>Pepperoni pizza</h6>
+            <p class="price">$15.66</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img
+                  src="images/Fried Chicken.jpg"
+                  class="img-fluid"
+                  alt="Fried chicken"
+                />
+              </div>
+            </div>
+            <h6>Classic fried chicken</h6>
+            <p class="price">$22.99</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- space -->
     <div class="p-5"></div>
 
-    <!-- section3 -->
+    <!-- section3: delivery -->
     <section class="food py-5">
-        <div class="container text-white py-5">
-            <div class="row">
-                <div class="col-lg-6 pt-5 text-center text">
-                    <h1 contenteditable="font-weight-bold py-3">Delivering Your Favorite Food in a Secure Manner</h1>
-                    <h6>Filling you up nicely!</h6>
+      <div class="container text-white py-5">
+        <div class="row">
+          <div class="col-lg-6 pt-5 text-center text-lg-start text">
+            <h1 class="fw-bold py-3">
+              Delivering your favorite food with care
+            </h1>
+            <h6>Filling you up nicely</h6>
 
-                    <button class="btn1 mt-3">Discover How</button>
-                </div>
-            </div>
+            <button class="btn1 mt-3">
+              <a href="#contact" class="btn-link">Discover how</a>
+            </button>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- contact -->
     <section class="contact py-5" id="contact">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-lg-5 m-auto text-center">
-                    <h1>Contact Us</h1>
-                    <h6 style="color: red;">Keep in Touch With Us at All Times</h6>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-9 m-auto">
-                    <div class="row">
-                        <div class="col-lg-4 pt-2">
-                            <h6>LOCATION</h6>
-                            <p>28 S 8th Street, Sinclair, WY</p>
-
-                            <h6>PHONE</h6>
-                            <p>+1-202-555-0167</p>
-
-                            <h6>EMAIL</h6>
-                            <p>query@ilovefood.com</p>
-                        </div>
-
-                        <!-- form -->
-                        <div class="col-lg-7 form">
-                            <form>
-                                <!-- name -->
-                                <div class="row mt-3">
-                                    <div class="col-lg-6">
-                                        <label for="firstName" class="form-label">First Name</label>
-                                        <input type="text" class="form-control" id="firstName" placeholder=""
-                                            aria-label="First name">
-                                    </div>
-
-                                    <div class="col-lg-6">
-                                        <label for="lastName" class="form-label">Last Name</label>
-                                        <input type="text" class="form-control" id="lastName" placeholder=""
-                                            aria-label="Last name">
-                                    </div>
-                                </div>
-
-                                <div class="row mt-3">
-                                    <!-- email -->
-                                    <div class="col-lg-6">
-                                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1"
-                                            aria-describedby="emailHelp">
-                                    </div>
-
-                                    <!-- phone no. -->
-                                    <div class="col-lg-6">
-                                        <label for="UserMobile" class="form-label">Phone No.</label>
-                                        <input type="text" id="UserMobile" maxlength="14" data-fv-numeric="true"
-                                            data-fv-numeric-message="Please enter valid phone numbers"
-                                            data-fv-phone-country11="IN" required="required"
-                                            data-fv-notempty-message="This field cannot be left blank." placeholder=" "
-                                            class="form-control" name="data[User][mobile]"
-                                            data-fv-field="data[User][mobile]">
-                                    </div>
-                                </div>
-                            </form>
-                            <button class="btn1 mt-4">Submit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-5 m-auto text-center">
+            <h1 class="section-heading">Contact us</h1>
+            <h6 class="section-subtitle">Keep in touch with us at all times</h6>
+          </div>
         </div>
+
+        <div class="row pt-3">
+          <div class="col-lg-9 m-auto">
+            <div class="row">
+              <div class="col-lg-4 pt-2 mb-4 mb-lg-0">
+                <h6>Location</h6>
+                <p>28 S 8th Street, Sinclair, WY</p>
+
+                <h6>Phone</h6>
+                <p>+1-202-555-0167</p>
+
+                <h6>Email</h6>
+                <p>query@foodtruckfiesta.com</p>
+              </div>
+
+              <!-- form -->
+              <div class="col-lg-7 ms-auto form">
+                <form>
+                  <!-- name -->
+                  <div class="row mt-3">
+                    <div class="col-lg-6 mb-3">
+                      <label for="firstName" class="form-label"
+                        >First name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="firstName"
+                        placeholder=""
+                      />
+                    </div>
+
+                    <div class="col-lg-6 mb-3">
+                      <label for="lastName" class="form-label">Last name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="lastName"
+                        placeholder=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row mt-1">
+                    <!-- email -->
+                    <div class="col-lg-6 mb-3">
+                      <label for="exampleInputEmail1" class="form-label"
+                        >Email address</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                      />
+                    </div>
+
+                    <!-- phone no. -->
+                    <div class="col-lg-6 mb-3">
+                      <label for="UserMobile" class="form-label"
+                        >Phone no.</label
+                      >
+                      <input
+                        type="text"
+                        id="UserMobile"
+                        maxlength="14"
+                        class="form-control"
+                        name="mobile"
+                        placeholder=""
+                      />
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn1 mt-3">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- footer -->
-    <footer class="d-flex flex-wrap justify-content-between align-items-center p-3 m-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                <img src="images/hamburger-icon.png" width="30" height="30" class="mt-1">
-              </a>
-            <span class="text-muted"><span
-                    style="font-size: 1.5rem; color: black; font-family: 'Lobster', cursive;">iLove Food</span></span>
-        </div>
-        
+    <footer
+      class="d-flex flex-wrap justify-content-between align-items-center p-3 m-4 border-top footer-bar"
+    >
+      <div class="col-md-4 d-flex align-items-center">
+        <a
+          href="#top"
+          class="d-flex align-items-center text-muted text-decoration-none footer-brand-link"
+        >
+          <img
+            src="images/hamburger-icon.png"
+            width="30"
+            height="30"
+            class="mt-1 me-2"
+            alt="FoodTruck Fiesta logo"
+          />
+          <span class="brand-script">FoodTruck Fiesta</span>
+        </a>
+      </div>
 
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-muted" href="https://twitter.com/" target="_blank"><img src="images/twitter.png"></a></li>
+      <ul
+        class="nav col-md-4 justify-content-end list-unstyled d-flex footer-icons"
+      >
+        <li class="ms-3">
+          <a
+            class="text-muted"
+            href="https://twitter.com/"
+            target="_blank"
+            aria-label="Twitter"
+          >
+            <img src="images/twitter.png" alt="Twitter" />
+          </a>
+        </li>
 
-            <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png"></a></li>
+        <li class="ms-3">
+          <a
+            class="text-muted"
+            href="https://www.instagram.com/"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <img src="images/instagram.png" alt="Instagram" />
+          </a>
+        </li>
 
-            <li class="ms-3"><a class="text-muted" href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png"></a></li>
-        </ul>
+        <li class="ms-3">
+          <a
+            class="text-muted"
+            href="https://www.facebook.com/"
+            target="_blank"
+            aria-label="Facebook"
+          >
+            <img src="images/facebook.png" alt="Facebook" />
+          </a>
+        </li>
+      </ul>
     </footer>
 
-    <!--  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
