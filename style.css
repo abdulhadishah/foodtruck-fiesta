@@ -1,177 +1,278 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-/* navbar */
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #fff7f3;
+  color: #222222;
+}
+
+.section-heading {
+  font-weight: 700;
+}
+
+.section-subtitle {
+  color: #f81a5d;
+  text-transform: none;
+  font-size: 0.95rem;
+}
+
+.brand-script {
+  font-size: 2.2rem;
+  color: #000000;
+  font-family: "Lobster", cursive;
+}
+
+.navbar {
+  font-family: "Rubik", sans-serif;
+}
+
 .navbar-brand {
-    font-size: 2rem;
-    color: black;
-    font-family: 'Lobster', cursive;
+  font-size: 2rem;
+  color: #000000 !important;
+  font-family: "Lobster", cursive;
 }
 
 .navbar-brand:hover {
-    color: #f81a5d;
-    -webkit-text-stroke: 0.2px #000000;
+  color: #f81a5d !important;
+  -webkit-text-stroke: 0.2px #000000;
 }
 
 .nav-link {
-    margin-right: 10px;
-    margin-left: 10px;
-    color: black;
-    font-family: 'Rubik', sans-serif;
-    text-transform: uppercase;
+  margin-right: 10px;
+  margin-left: 10px;
+  color: #111827 !important;
+  font-family: "Rubik", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.85rem;
 }
 
 .nav-link:hover {
-    color: #f81a5d;
-    -webkit-text-stroke: 0.2px #000000;
+  color: #f81a5d !important;
+  -webkit-text-stroke: 0.2px #000000;
+  text-shadow: 0 0 3px #f81a5d;
+  transition: 0.3s;
 }
 
-.search {
-    height: 40px;
-    width: 80%;
-    border-radius: 60px;
-    outline: none;
-    margin-right: -35px;
-    font-family: 'Rubik', sans-serif;
-    border: 2px solid #f81a5d;
+.brand-link:hover .brand-text,
+.brand-link:hover .brand-icon {
+  color: #f81a5d;
+  filter: brightness(0) saturate(100%) invert(26%) sepia(95%) saturate(3192%)
+    hue-rotate(327deg) brightness(105%) contrast(97%);
+  -webkit-text-stroke: 0.2px #000000;
+  transition: 0.3s;
 }
 
-
-.btn0 {
-    height: 40px;
-    width: 40%;
-    outline: none;
-    border: none;
-    background: #f81a5d;
-    color: white;
-    border-radius: 60px;
-    font-weight: 700;
-}
-
-.btn0:hover{
-    background-color: #000000;
-    color: #ffffff;
-    border: solid 1px #f81a5d;
-    text-shadow: 0 0 3px #f81a5d;
-    -webkit-text-stroke: 0.2px #f81a5d;
-    transition: 0.5s;
-}
-
-/* mobile */
+/* mobile toggler button */
 .navbar-toggler {
-    padding: 0.25rem 0.75rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    background-color: #f81a5d00;
-    border: 2px solid #f81a5d;
-    border-radius: 100rem;
-    transition: box-shadow .15s ease-in-out;
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 2px solid #f81a5d;
+  border-radius: 100rem;
+  transition: box-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out;
 }
 
-.navbar-toggler:hover{
-    padding: 0.25rem 0.75rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    background-color: #f81a5d00;
-    border: 2px solid #f81a5d;
-    border-radius: 100rem;
-    transition: box-shadow .15s ease-in-out;
-}
-
-/* section 1 */
-.main {
-    background: url(./images/Pepperoni\ Pizza\ on\ Plate.jpg) no-repeat;
-    background-size: cover;
-    height: 100vh;
-    background-position: 50% 50%;
-    width: 100%;
-}
-
-.main h1 {
-    font-size: 4rm;
-    color: #ffffff;
-    font-weight: 700;
-    text-shadow: 0 0 3px #f81a5d;
+.navbar-toggler:hover {
+  background-color: #f81a5d10;
+  box-shadow: 0 0 0 0.1rem #f81a5d40;
 }
 
 .btn1 {
-    height: 45px;
-    width: 35%;
-    border: none;
-    outline: none;
-    background-color: #f81a5d;
-    color: #ffffff;
-    font-weight: 700;
-    border-radius: 60px;
+  height: 45px;
+  min-width: 180px;
+  border: none;
+  outline: none;
+  background-color: #f81a5d;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 60px;
+  padding: 0 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn1:hover {
-    background-color: #ffffff35;
-    color: #f81a5d;
-    border: solid 1px #f81a5d;
-    text-shadow: 0 0 3px #ffffff;
-    transition: 0.5s;
+  background-color: #ffffff35;
+  color: #f81a5d;
+  border: solid 1px #f81a5d;
+  text-shadow: 0 0 3px #ffffff;
+  transition: 0.5s;
 }
 
-.field {
-    padding-top: 15rem;
+.btn-link {
+  color: inherit;
+  text-decoration: none;
 }
 
-/* section 1 */
-.img {
-    padding-left: 25%;
-    padding-right: 25%;
-    padding-top: 10%;
+.btn-link:hover {
+  color: inherit;
+  text-decoration: none;
 }
 
-/* section 2 */
-.bg-color{
-    background-color: #00000005;
+/* Hero section */
+
+.main {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
+    url(./images/Pepperoni\ Pizza\ on\ Plate.jpg) no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
 }
 
-.card:hover {
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    transition: 0.5s;
-}
-
-/* section 3 */
-.food{
-    background:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(images/Man\ Wearing\ a\ Face\ Mask\ Delivering\ Pizza.jpg) no-repeat;
-    background-size: cover;
-    height: 80vh;
-    width: 100%;
-}
-
-
-.food h1{
-    font-family: 'Lobster', cursive;
-}
-
-.food h6{
-    text-shadow: 0 0 3px #f81a5d;
-}
-
-.text {
-    padding-top: 9rem!important;
-}
-
-/* contact */
-@media only screen and (max-width: 600px) {
-    .col-lg-7.form {
-        margin-left: 1px;
-        padding-right: 2.1rem;
+@media (max-width: 768px) {
+  .main {
+    min-height: 70vh;
   }
 }
 
-/* footer */
+.main h1 {
+  font-size: 3.2rem;
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 0 6px #f81a5d;
+  line-height: 1.1;
+}
 
-.d-flex.gap-2.sub {
-    gap: 0.5rem!important;
-    padding-left: 20rem;
-    padding-right: 20rem;
+.field {
+  padding-top: 6rem;
+}
+
+@media (max-width: 768px) {
+  .main h1 {
+    font-size: 2.4rem;
+  }
+
+  .field {
+    padding-top: 4rem;
+  }
+}
+
+/* What we offer */
+
+.bg-color {
+  background-color: #fff0f4;
+}
+
+.offer-icon {
+  max-width: 90px;
+  margin-bottom: 0.75rem;
+}
+
+.offer-text {
+  font-size: 0.9rem;
+  color: #555555;
+}
+
+/* Menu */
+
+.card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+}
+
+.price {
+  font-weight: 600;
+  color: #f81a5d;
+  margin-bottom: 0;
+}
+
+/* Delivery section */
+
+.food {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.35)),
+    url(images/Man\ Wearing\ a\ Face\ Mask\ Delivering\ Pizza.jpg) no-repeat;
+  background-size: cover;
+  height: 80vh;
+  width: 100%;
+}
+
+.food h1 {
+  font-family: "Lobster", cursive;
+}
+
+.food h6 {
+  text-shadow: 0 0 3px #f81a5d;
+}
+
+.text {
+  padding-top: 6rem !important;
+}
+
+@media (max-width: 768px) {
+  .food {
+    height: auto;
+  }
+
+  .text {
+    padding-top: 3rem !important;
+    padding-bottom: 2rem;
+  }
+}
+
+.contact p {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+/* ===== Footer ===== */
+
+.footer-bar {
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+.footer-brand-link .brand-script {
+  font-size: 1.5rem;
+}
+
+/* footer brand (logo + text) */
+.footer-brand-link:hover .brand-script,
+.footer-brand-link:hover img {
+  color: #f81a5d;
+  filter: brightness(0) saturate(100%) invert(26%) sepia(95%) saturate(3192%)
+    hue-rotate(327deg) brightness(105%) contrast(97%);
+  transition: 0.3s;
+}
+
+/* Footer social icons */
+
+.footer-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  transition: border-color 0.2s ease, background-color 0.2s ease,
+    box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.footer-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-icons a:hover {
+  border-color: #f81a5d;
+  background-color: #fff0f4;
+  box-shadow: 0 0 0 3px rgba(248, 26, 93, 0.12);
+  transform: translateY(-1px);
 }
